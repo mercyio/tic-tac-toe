@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<header class="head">
+<div class="x">X <span class="o">O</span></div>
+<button class="turn-container turn"><span class="turn">X TURN</span></button>
+<button class="change-turn"><a class="change" href=""></a></button>
+<!-- <div class="wins"> 
+ <p><span class="wins-X"><span>X scores: </span> <span class="x-wins">0</span></span>
+  <span class="wins-O"><span>O scores: </span>  <span class="o-wins">0</span></span></p>
+</div> -->
+</header>
+<div class="win-modal">
+  <div class="win-modal-dialogue">
+      <h4 class="win-text">You won</h4>
+      <p class="winner-text"><span class="winner">X</span> takes the round</p>
+      <div class="btn-container">
+         <a class="quit" href="./page.html"><button class="quit">Quit</button></a>
+        <a class="continue" href=""><button class="continue">Next Round</button></a>
+      </div>
+  </div>
+</div>
+
+<div class="game-board">
+    <div class="tile" id="1"></div>
+    <div class="tile" id="2"></div>
+    <div class="tile" id="3"></div>
+    <div class="tile" id="4"></div>
+    <div class="tile" id="5"></div>
+    <div class="tile" id="6"></div>
+    <div class="tile" id="7"></div>
+    <div class="tile" id="8"></div>
+    <div class="tile" id="9"></div>
+</div>
+   <header class="scores">
+    <div class="x-win-container"> 
+      <p><span class="wins-X"><span class="wins-x">X</span><span>    scores</span></span> <span class="x-wins">0</span></span></p>
+    </div> 
+   <a href="./page.html" class="start quit">NEW GAME</a>>
+    <div class="o-win-container"> 
+      <p><span class="wins-O"><span class="wins-o">O</span> <span>scores</span></span>    <span class="o-wins">0</span></span></p>
+    </div>
+    <!-- <div class="note">
+    <h1 class="note1">Player <span class="turn">X</span>  Turn</h1>
+   <div class="change-turn"><button class="change-turn">Change Turn</button></div> 
+    </div>
+    <div class="note2"><a href=""><button class="button"><h2><a href=""> Play Again</a></h2></button></a></div> -->
+   </header>
+   
+<body>
+  <!-- <script src="./script.js"></script>   -->
+  <script src="./index.js"></script>
+</body>
+</html>

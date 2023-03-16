@@ -1,0 +1,408 @@
+ /* .game-board{
+     display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    max-width: 500px;
+    min-height: 350px;
+    margin: auto;
+    
+}
+.game-board .tile{
+    border: 1px solid  rgb(24, 24, 150);
+    font-size: 20px;
+    padding-top: 30px;
+    font-weight: 900;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+.head{
+    display: flex;
+    text-align: center;
+    justify-content:space-between;
+}
+.wins{
+    margin-top: 10px;
+    color: rgb(16, 16, 79);
+}
+.wins-O{
+    padding:0px 40px;
+    font-weight: bolder;
+    color:blue;
+}
+.wins-X{
+    padding:0px 40px;
+    font-weight: bolder;
+    color: green;
+}
+.title{
+    padding-left:545px ;
+    color: rgb(27, 27, 109);
+}
+.scores{
+    display: flex;
+    margin-left: 20px;
+    padding-right: 210px;
+}
+.wins-name{
+    font-size: 25px;
+}
+.note2{
+    margin:0PX auto;
+    margin-top: 60px;
+}
+.note{
+    color: rgb(16, 16, 79);
+}
+button{
+    width: 200px;
+}
+a{
+    text-decoration: none;
+    color: rgb(16, 16, 79);
+}
+a:hover{
+    color:blue;
+}
+@media screen and (max-width: 790px) {
+    .note1{
+    font-size: 25px;
+    }
+    button{
+        width: 120px;
+        font-size: small;
+       height: 60px;
+    } 
+    .scores{
+        display: flex;
+        margin-left: 20px;
+        padding-right: 160px;
+    } 
+}
+@media screen and (max-width: 530px) {
+    .note{
+    font-size: 12px;
+    }
+    .note1{
+        font-size: 20px;
+        }
+    button{
+        width: 100px;
+        font-size: x-small;
+    } 
+    .scores{
+        padding-right: 130px;
+        margin-left: 7px; 
+    } 
+}
+.change-turn{
+    min-height: 40px;
+    max-width: 150px;
+    font-size: 16.8px;
+    font-weight: bolder;
+    color: rgb(16, 16, 79);
+} */
+/* #2FC4C1 */
+/* #F3B131 */
+/* #AAC3CC */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body{
+    min-height: 100%;
+    max-width: 100%;
+    background-color: #192A32;
+    color: #85203b;
+    text-align: center;
+    margin: 0%;
+    padding: 0px;
+}
+*{
+    font-family: 'Lato', sans-serif;
+}
+/* .head{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly; 
+    padding: 0px 20px;
+    padding: 10px 0px;
+}
+.turns{
+    background-color: #274552 ;
+    color: white;
+    padding:5px 10px;
+    border-radius: 7px;
+} */
+
+.game-board{
+    max-width: 700px;
+    min-height:400px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    margin: auto;
+}
+.game-board .tile{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+   font-size: 40px;
+   display: flex;
+   border-radius: 10px;
+   align-items: center;
+   justify-content: center;
+}
+.x,.o{
+  font-size: 40px;
+  font-weight: 900;
+}
+.x{
+    color:#2FC4C1 ;
+}
+.o{
+ color: #F3B131;   
+}
+.turn-icon{
+    padding-right: 10px;
+}
+.turn-container .note1{
+     /* background-color: #1d374285;  */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    width: 120px;
+    color: white;
+    height: 40px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    margin:10px auto;
+    color: #AAC3CC ;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
+}
+.title{
+    background-color: #192A32;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    width: 60px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 10px;
+}
+.title .x ,
+.title .o{
+ font-size: 26px;
+ 
+}
+.scores{
+    max-width: 700px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total-wins .x,
+.total-wins .o{
+    font-size: 22px;
+    color: #192A32;
+    padding-right: 5px;
+    
+}
+.x-win-container,
+.o-win-container,
+.start {
+    width: 200px;
+    min-height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #192A32;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.x-win-container {
+    background-color: #2FC4C1;
+    font-size: 18px;
+}
+.o-win-container{
+    background-color: #F3B131;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.change-turn{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    border: none;
+    font-size: 23px;
+    color: #cde5f0;
+    border-radius: 70px;
+    background-color:#325564;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.change{
+    width:20px ;
+    height:20px ;
+    background-color:#2FC4C1 ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wins-x, .wins-o{
+    font-size: 30px;
+    font-weight: 900;
+}
+.x-wins,.o-wins{
+    font-weight: 700;
+    font-size: 22px;
+    margin-left:10px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.turn{
+    padding: 5px 12px;
+    color: #cde5f0;
+    font-size: 23px;
+    font-weight: 800;
+     background-color:  #182b3451;
+    border-color: transparent;
+    border-radius: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.full-screen{
+    margin: auto;
+    padding: 40px 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.layer{
+    display: block;
+    background-color: #23414e;
+    border-radius: 10px;
+    margin: auto;
+    height: 600;
+    width: 400px;
+    padding: 20px 0px;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.turn-x{
+    background-color: #192A32;
+    color: #cde5f0;
+    border-color: transparent;
+    padding: 0px 45px;
+    margin-right: -10px;
+    border-radius: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.turn-o{
+    background-color: #cde5f0;
+    color: #192A32;
+    padding: 0px 5px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    border-color: transparent;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.turn-x{
+    background-color: transparent;
+    color: #192A32;
+    padding: 0px 45px;
+    border-color: transparent;
+    border-radius: 7px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.info{
+    color: #cde5f0;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.start-game{
+    padding: 15px 160px;
+    border-radius: 7px;
+    margin: 20px 0px ;
+    text-decoration: none;
+    border-color: transparent;
+    background-color: #F3B131;
+    color: #192A32;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.exit{
+    padding: 15px 185px;
+    border-radius: 7px;
+    color: #192A32;
+    font-weight: 800;
+    border-color: transparent;
+    background-color:rgb(15, 132, 132);
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.game{
+    margin-top: 50px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.start{
+    background-color: #AAC3CC;
+    width: 200px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #192A32;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.win-modal{
+    transform: scale(0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.199);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    transition: all ease 0.5s;
+}
+.win-modal-dialogue{
+    width: 100%;
+    background-color: #21363fe6;
+    min-height: 200px;
+    text-align: center;
+    padding: 16px;
+}
+.win-modal button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #192A32;
+}
+.win-modal button:first-child{
+    background-color: #AAC3CC;
+}
+.win-modal button:nth-child(2){
+    background-color: #F3B131;
+}
+.win-modal h4{
+    color: #AAC3CC;
+    font-size: 16px;
+}
+.winner-text{
+    color: #2FC4C1;
+    font-size: 40px;
+    font-weight: 900;
+}
